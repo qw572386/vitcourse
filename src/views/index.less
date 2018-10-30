@@ -1,0 +1,36 @@
+.layout{
+    border: 1px solid #d7dde4;
+    border-bottom: none;
+    background: #f5f7f9;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    &-header{
+        position: fixed;
+        width: 100%;
+        &-menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .layout-logo{
+            width: 100px;
+            height: 30px;
+            background: #5b6270;
+            border-radius: 3px;
+        }
+        .layout-nav{
+        }
+        .layout-setting{
+            margin-right: 20px;
+        }
+    }
+    &-content{
+        padding: 74px 10px 0;
+        min-height: ~"calc(100vh - 74px)"
+    }
+    &-footer-center{
+        text-align: center;
+        box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .1)
+    }
+}
