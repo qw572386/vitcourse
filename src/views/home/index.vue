@@ -1,12 +1,13 @@
 <template>
     <div>
-        <Carousel autoplay v-model="value2" loop :height="300">
+        <!-- <Carousel autoplay v-model="value2" loop :height="300">
             <CarouselItem v-for="(item, index) in carouselList" :key="`carouselitem${index}`">
                 <div class="demo-carousel">
                     <img :src="item.bgUrl" alt="">
                 </div>
             </CarouselItem>
-        </Carousel>
+        </Carousel> -->
+        <vit-carousel :carouselConfig="carouselConfig" :carouselList="carouselList" @on-click="view"></vit-carousel>
         <Row :gutter="10">
             <Col :xs="24" :sm="{ span: 16, offset: 1 }">
                 <Row class="main-content">
@@ -30,10 +31,22 @@
 <script>
     // import { mapActions } from 'vuex'
     import { getCarousel } from '@/api/app'
+    import vitCarousel from '_c/vitCarousel'
     export default {
+        components: {
+            vitCarousel
+        },
         data () {
             return {
                 value2: 2,
+                carouselConfig: {
+                    height: 350,
+                    loop: false,
+                    autoplay: true,
+                    arrow: 'always',
+                    speed: 2000,
+                    radiusDot: true
+                },
                 carouselList: [],
                 cardList: [
                     {
@@ -79,7 +92,6 @@
         },
         mounted () {
           getCarousel().then(res => {
-              console.log(res)
             this.carouselList = res.data
           })
         }
