@@ -1,8 +1,8 @@
 <template>
     <Carousel class="vit-carousel" 
         :height="carouselConfig.height" 
-        loop 
-        autoplay
+        :loop="carouselConfig.loop" 
+        :autoplay="carouselConfig.autoplay"
         :autoplay-speed="carouselConfig.speed"
         :dots="carouselConfig.dots"
         :radius-dot="carouselConfig.radiusDot"
@@ -25,7 +25,7 @@
             carouselConfig: {
                 type: Object,
                 default: () => {
-                    height: 100;
+                    height: 'auto';
                     loop: true;
                     autoplay: true;
                     speed: 2000;
@@ -50,6 +50,8 @@
             handleClick (id) {
                 this.$emit('on-click', id)
             }
+        },
+        mounted () {
         }
     }
 </script>

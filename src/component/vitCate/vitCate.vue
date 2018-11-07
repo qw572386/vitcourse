@@ -1,0 +1,36 @@
+<template>
+    <div class="vit-cate">
+        <slot name="vit-cate-title"></slot>
+        <Row class="vit-cate-content">
+            <Col :xs="24" :sm="12" :md="8" :lg="6" v-for="(item, index) in cardList" :key="`card_${index}`" class="main-content-col">
+                <Card>
+                    <div style="text-align:center" @click="view(item.id)">
+                        <img :src="item.src">
+                        <h3>{{ item.title }}</h3>
+                    </div>
+                </Card>
+            </Col>
+        </Row>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: 'vitCate',
+        props: {
+            cardList: {
+                type: Array,
+                default: () => []
+            }
+        },
+        data () {
+            return {
+
+            }
+        }
+    }
+</script>
+
+<style lang="less" scoped>
+
+</style>

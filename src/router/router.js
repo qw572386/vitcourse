@@ -18,12 +18,7 @@ const routers = [
                 path: 'detail/:id',
                 name: 'detail',
                 component: (resolve) => require(['@/views/courses/detail.vue'], resolve)
-            },
-            {
-                path: 'vit',
-                name: 'vit',
-                component: (resolve) => require(['@/component/vitCarousel/vitCarousel.vue'], resolve)
-            },
+            }
         ]
     },
     {

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!-- <Carousel autoplay v-model="value2" loop :height="300">
+        <!-- <Carousel :autoplay="autoplay" v-model="value2" :loop="autoplay" :height="300">
             <CarouselItem v-for="(item, index) in carouselList" :key="`carouselitem${index}`">
                 <div class="demo-carousel">
                     <img :src="item.bgUrl" alt="">
@@ -41,7 +41,7 @@
                 value2: 2,
                 carouselConfig: {
                     height: 350,
-                    loop: false,
+                    loop: true,
                     autoplay: true,
                     arrow: 'always',
                     speed: 2000,
