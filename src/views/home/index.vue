@@ -1,30 +1,11 @@
 <template>
-    <div>
-        <!-- <Carousel :autoplay="autoplay" v-model="value2" :loop="autoplay" :height="300">
-            <CarouselItem v-for="(item, index) in carouselList" :key="`carouselitem${index}`">
-                <div class="demo-carousel">
-                    <img :src="item.bgUrl" alt="">
-                </div>
-            </CarouselItem>
-        </Carousel> -->
+    <div class="vit-main">
         <vit-carousel :carouselConfig="carouselConfig" :carouselList="carouselList" @on-click="view"></vit-carousel>
-        <Row :gutter="10">
-            <Col :xs="24" :sm="{ span: 16, offset: 1 }">
-                <Row class="main-content">
-                    <Col :xs="24" :sm="12" :md="8" :lg="6" v-for="(item, index) in cardList" :key="`card_${index}`" class="main-content-col">
-                        <Card>
-                            <div style="text-align:center" @click="view(item.id)">
-                                <img :src="item.src">
-                                <h3>{{ item.title }}</h3>
-                            </div>
-                        </Card>
-                    </Col>
-                </Row>
-            </Col>
-            <Col :xs="24" :sm="6">
-            you
-            </Col>
-        </Row>
+        <div class="vit-main-content">
+            <vit-cate :cardList="cardList">
+                <h3 slot="vit-cate-title" class="vit-main-content-cate-title"><span class="vit-icon icon-shizhan-l vit-icon-l"></span>实 / 战 / 推 / 荐<span class="vit-icon icon-shizhan-r vit-icon-r"></span></h3>
+            </vit-cate>
+        </div>
     </div>
 </template>
 
@@ -32,9 +13,11 @@
     // import { mapActions } from 'vuex'
     import { getCarousel } from '@/api/app'
     import vitCarousel from '_c/vitCarousel'
+    import vitCate from '_c/vitCate'
     export default {
         components: {
-            vitCarousel
+            vitCarousel,
+            vitCate
         },
         data () {
             return {
@@ -49,6 +32,7 @@
                 },
                 carouselList: [],
                 cardList: [
+                
                     {
                         src: '',
                         id: 521314,
@@ -79,6 +63,36 @@
                         id: 521314,
                         title: 'A high quality UI Toolkit based on Vue.js'
                     },
+                    {
+                        src: '',
+                        id: 521314,
+                        title: 'A high quality UI Toolkit based on Vue.js'
+                    },
+                    {
+                        src: '',
+                        id: 521314,
+                        title: 'A high quality UI Toolkit based on Vue.js'
+                    },
+                    {
+                        src: '',
+                        id: 521314,
+                        title: 'A high quality UI Toolkit based on Vue.js'
+                    },
+                    {
+                        src: '',
+                        id: 521314,
+                        title: 'A high quality UI Toolkit based on Vue.js'
+                    },
+                    {
+                        src: '',
+                        id: 521314,
+                        title: 'A high quality UI Toolkit based on Vue.js'
+                    },
+                    {
+                        src: '',
+                        id: 521314,
+                        title: 'A high quality UI Toolkit based on Vue.js'
+                    }
                 ]
             }
         },
@@ -99,9 +113,19 @@
 </script>
 
 <style lang="less" scoped>
-.main-content{
-    &-col{
-        padding: 5px;
+.vit-main{
+    &-content{
+        padding-top: 10px;
+        &-cate{
+            &-title{
+                color: #93999F;
+                letter-spacing: .6px;
+                line-height: 36px;
+                text-align: center;
+            }
+        }
+    }
+    &-aside{
     }
 }
 </style>
