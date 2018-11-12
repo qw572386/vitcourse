@@ -48,7 +48,7 @@
         },
         methods: {
             handleClick (id) {
-                this.$emit('on-click', id)
+                this.$emit('on-select', id)
             }
         },
         mounted () {

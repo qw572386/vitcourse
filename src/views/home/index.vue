@@ -1,8 +1,8 @@
 <template>
     <div class="vit-main">
-        <vit-carousel :carouselConfig="carouselConfig" :carouselList="carouselList" @on-click="view"></vit-carousel>
+        <vit-carousel :carouselConfig="carouselConfig" :carouselList="carouselList" @on-select="view"></vit-carousel>
         <div class="vit-main-content">
-            <vit-cate :cardList="cardList">
+            <vit-cate :cardList="cardList"  @on-select="view">
                 <h3 slot="vit-cate-title" class="vit-main-content-cate-title"><span class="vit-icon icon-shizhan-l vit-icon-l"></span>实 / 战 / 推 / 荐<span class="vit-icon icon-shizhan-r vit-icon-r"></span></h3>
             </vit-cate>
         </div>
@@ -34,62 +34,42 @@
                 cardList: [
                 
                     {
-                        src: '',
+                        src: 'https://img-ph-mirror.nosdn.127.net/S_KZHbKd1cVnNakzi7s3nw==/39125021863241218.png?imageView&thumbnail=223x125&quality=100',
+                        id: 521314,
+                        title: 'A high quality UI Toolkit based on Vue.js sdfashdfsdfgjkasdfhdklsfgjfkldhsklhadfahfghsdfghasr'
+                    },
+                    {
+                        src: 'https://edu-image.nosdn.127.net/6DEFC52F206C0D7C42468EF936AD5786.png?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100',
                         id: 521314,
                         title: 'A high quality UI Toolkit based on Vue.js'
                     },
                     {
-                        src: '',
+                        src: 'https://edu-image.nosdn.127.net/12AEC41745BB180734135A70FAB424D2.jpg?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100',
                         id: 521314,
                         title: 'A high quality UI Toolkit based on Vue.js'
                     },
                     {
-                        src: '',
+                        src: 'https://edu-image.nosdn.127.net/01C1C9410E675EBBFECECD587D161A71.jpg?imageView&thumbnail=426y240&quality=100&thumbnail=223x125&quality=100',
                         id: 521314,
                         title: 'A high quality UI Toolkit based on Vue.js'
                     },
                     {
-                        src: '',
+                        src: 'https://edu-image.nosdn.127.net/B2B4D218926FB3D1D7A569B7D9EBADA4.png?imageView&thumbnail=426y240&quality=100&thumbnail=223x125&quality=100',
                         id: 521314,
                         title: 'A high quality UI Toolkit based on Vue.js'
                     },
                     {
-                        src: '',
+                        src: 'https://edu-image.nosdn.127.net/366CAA65B385648971812A5858624DB0.jpg?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100',
                         id: 521314,
                         title: 'A high quality UI Toolkit based on Vue.js'
                     },
                     {
-                        src: '',
+                        src: 'https://edu-image.nosdn.127.net/366CAA65B385648971812A5858624DB0.jpg?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100',
                         id: 521314,
                         title: 'A high quality UI Toolkit based on Vue.js'
                     },
                     {
-                        src: '',
-                        id: 521314,
-                        title: 'A high quality UI Toolkit based on Vue.js'
-                    },
-                    {
-                        src: '',
-                        id: 521314,
-                        title: 'A high quality UI Toolkit based on Vue.js'
-                    },
-                    {
-                        src: '',
-                        id: 521314,
-                        title: 'A high quality UI Toolkit based on Vue.js'
-                    },
-                    {
-                        src: '',
-                        id: 521314,
-                        title: 'A high quality UI Toolkit based on Vue.js'
-                    },
-                    {
-                        src: '',
-                        id: 521314,
-                        title: 'A high quality UI Toolkit based on Vue.js'
-                    },
-                    {
-                        src: '',
+                        src: 'https://edu-image.nosdn.127.net/366CAA65B385648971812A5858624DB0.jpg?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100',
                         id: 521314,
                         title: 'A high quality UI Toolkit based on Vue.js'
                     }
