@@ -21,7 +21,6 @@
         },
         data () {
             return {
-                value2: 2,
                 carouselConfig: {
                     height: 350,
                     loop: true,
@@ -31,49 +30,7 @@
                     radiusDot: true
                 },
                 carouselList: [],
-                cardList: [
-                
-                    {
-                        src: 'https://img-ph-mirror.nosdn.127.net/S_KZHbKd1cVnNakzi7s3nw==/39125021863241218.png?imageView&thumbnail=223x125&quality=100',
-                        id: 521314,
-                        title: 'A high quality UI Toolkit based on Vue.js sdfashdfsdfgjkasdfhdklsfgjfkldhsklhadfahfghsdfghasr'
-                    },
-                    {
-                        src: 'https://edu-image.nosdn.127.net/6DEFC52F206C0D7C42468EF936AD5786.png?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100',
-                        id: 521314,
-                        title: 'A high quality UI Toolkit based on Vue.js'
-                    },
-                    {
-                        src: 'https://edu-image.nosdn.127.net/12AEC41745BB180734135A70FAB424D2.jpg?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100',
-                        id: 521314,
-                        title: 'A high quality UI Toolkit based on Vue.js'
-                    },
-                    {
-                        src: 'https://edu-image.nosdn.127.net/01C1C9410E675EBBFECECD587D161A71.jpg?imageView&thumbnail=426y240&quality=100&thumbnail=223x125&quality=100',
-                        id: 521314,
-                        title: 'A high quality UI Toolkit based on Vue.js'
-                    },
-                    {
-                        src: 'https://edu-image.nosdn.127.net/B2B4D218926FB3D1D7A569B7D9EBADA4.png?imageView&thumbnail=426y240&quality=100&thumbnail=223x125&quality=100',
-                        id: 521314,
-                        title: 'A high quality UI Toolkit based on Vue.js'
-                    },
-                    {
-                        src: 'https://edu-image.nosdn.127.net/366CAA65B385648971812A5858624DB0.jpg?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100',
-                        id: 521314,
-                        title: 'A high quality UI Toolkit based on Vue.js'
-                    },
-                    {
-                        src: 'https://edu-image.nosdn.127.net/366CAA65B385648971812A5858624DB0.jpg?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100',
-                        id: 521314,
-                        title: 'A high quality UI Toolkit based on Vue.js'
-                    },
-                    {
-                        src: 'https://edu-image.nosdn.127.net/366CAA65B385648971812A5858624DB0.jpg?imageView&thumbnail=510y288&quality=100&thumbnail=223x125&quality=100',
-                        id: 521314,
-                        title: 'A high quality UI Toolkit based on Vue.js'
-                    }
-                ]
+                cardList: []
             }
         },
         methods: {
@@ -81,6 +38,7 @@
         //     'getCarousel'
         //   ]),
           view(id) {
+              console.log(id)
             this.$router.push({path: `/detail/${id}`})
           }
         },

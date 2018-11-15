@@ -17,7 +17,7 @@ const routers = [
             {
                 path: 'detail/:id',
                 name: 'detail',
-                component: (resolve) => require(['@/views/courses/detail.vue'], resolve)
+                component: (resolve) => require(['@/views/course/course.vue'], resolve)
             }
         ]
     },
